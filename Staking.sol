@@ -113,7 +113,7 @@ contract StakingContract is Ownable {
 
     function setLockTime(uint256 newLockTime) external onlyOwner {
         require(
-            lockTime <= 10**7,
+            newLockTime <= 10**7,
             'Lock Time Too Long'
         );
         lockTime = newLockTime;
